@@ -1,6 +1,10 @@
 @import (inline) "reset.css";
 @import (reference) "colors";
 
+*{
+	box-sizing: border-box;
+}
+
 body, html{
 	background: @body-bg;
 	font-size: 10px;
@@ -53,7 +57,7 @@ header{
 
 main{
 	font-family: "Source Sans Pro";
-	max-width: 1000px;
+	max-width: 980px;
 	margin: 0 auto;
 
 	h1{
@@ -86,6 +90,7 @@ main{
 
 @import "post";
 @import "listing";
+@import "home";
 
 footer{
 	background: @altx-red;
