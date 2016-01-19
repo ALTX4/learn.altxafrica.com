@@ -28,7 +28,7 @@ gulp.task('browser-sync-dev', ['images', 'html-dev', 'css-dev', 'scripts-dev'], 
 	gulp.watch('css/*.less', ['css-dev']);
 	gulp.watch('js/*.js', ['scripts-dev']);
 	gulp.watch("./*.html", ['html-dev']);
-	
+	gulp.watch("images/*", ['images-dev']);	
 });
 
 gulp.task('css-dev', function() {
@@ -55,6 +55,11 @@ gulp.task('html-dev', function(){
 	.pipe(gulp.dest('build'))
 	.pipe(reload({stream: true}));
 });
+
+gulp.task('images-dev', function(){
+	return gulp.src(['images/**/*.jpg', 'images/**/*.jpeg', 'images/**/*.png'])
+	.pipe(gulp.dest('build/images'))
+})
 
 //********************************
 // Production
