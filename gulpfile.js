@@ -51,7 +51,7 @@ gulp.task('scripts-dev', function() {
 });
 
 gulp.task('html-dev', function(){
-	return gulp.src(['./*html'])
+	return gulp.src(['./*.html'])
 	.pipe(gulp.dest('build'))
 	.pipe(reload({stream: true}));
 });
