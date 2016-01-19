@@ -1,3 +1,4 @@
+@import (inline) "reset.css";
 @import (reference) "colors";
 body, html{
 	background: @body-bg;
@@ -9,8 +10,14 @@ main{
 	margin: 0 auto;
 	
 	h1{
-		font-size: 4rem;
+		font-size: 4.5rem;
 		font-weight: bold;
+		margin: 5px 0 3px;
+	}
+	
+	h3{
+		font-family: "Source Sans Pro Light";
+		font-size: 2.4rem;
 	}
 	
 	p{
@@ -28,4 +35,10 @@ main{
 			color: @altx-orange;
 		}
 	}
+}
+
+.post-title{
+	border-bottom: 1px solid @black;
+	margin: 0 0 20px;
+	padding: 0 0 5px;
 }
